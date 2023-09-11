@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+}
+
+.pong-table {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    background-color: #222;
+}
+
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    animation: moveBall 1s infinite linear;
+}
+
+.paddle {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    background-color: white;
+}
+
+#player1 {
+    left: 10px;
+}
+
+#player2 {
+    right: 10px;
+}
+
+@keyframes moveBall {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(500px, 200px); }
+}
